@@ -107,9 +107,6 @@
     grid-row: span 2;
   }
 
-  .wrapper__image:nth-child(4) {
-  }
-
   .wrapper__image:nth-child(5) {
     grid-column: span 2;
   }
