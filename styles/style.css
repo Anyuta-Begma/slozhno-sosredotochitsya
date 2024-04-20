@@ -2,4 +2,241 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--main-color);
+  background: var(--background-image) no-repeat top center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  padding: 0 10px;
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  position: relative;
+  padding: 10px 0;
+  block-size: 100vh;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  block-size: 25px;
+  inline-size: 25px;
+  inset-block-start: 10px;
+  inset-inline-end: 0;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  block-size: 25px;
+  inline-size: 25px;
+  inset-block-end: 10px;
+  inset-inline-start: 0;
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+}
+
+.rec::before {
+  content: "Rec";
+  position: absolute;
+  text-transform: uppercase;
+  font-family: var(--main-font);
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 25px;
+  color: var(--accent-color);
+  inset-block-start: 10px;
+  inset-inline-end: 28px;
+}
+
+.rec::after {
+  content: "";
+  position: absolute;
+  background-color: var(--accent-color);
+  block-size: 9px;
+  inline-size: 9px;
+  border-radius: 50%;
+  inset-block-start: 18px;
+  inset-inline-end: 9px;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+
+.header__theme-menu {
+  grid-row-start: 1;
+  align-self: center;
+  justify-self: flex-end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  
+}
+
+.header__theme-menu-item {
+  color: var(--border-color);
+}
+
+.header__theme-menu-button {
+  padding: 1.5px 13px;
+  font-family: var(--main-font);
+  line-height: 1;
+  text-transform: lowercase;
+  background-color: var(--transparent-color);
+  border: none;
+}
+
+@media (hover: hover) {
+  .header__theme-menu-button:hover {
+    outline: 1px solid var(--hover-color);
+    cursor: pointer;
+  }
+}
+.header__theme-menu-button:focus {
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--border-color);
+  padding: 0.5px 13px;
+}
+
+.header__theme-menu-button_active:disabled {
+  outline: 1px solid var(--border-color);
+  border: none;
+  text-decoration: none;
+  cursor: none;
+}
+
+.header__title {
+  grid-row-start: 2;
+  font-family: var(--main-font);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 82.5%;
+  color: var(--accent-text-color);
+  text-shadow: 4px 4px 0px var(--text-shadow-color);
+}
+
+.header__subtitle {
+  grid-row-start: 3;
+  align-self: center;
+  justify-self: flex-end;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 40px 0;
+}
+
+.main__wrapper {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  gap: 20px;
+}
+
+.wrapper__title {
+  font-family: var(--main-font);
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 23.4px;
+  color: var(--border-color);
+}
+
+.wrapper-list {
+  display: grid;
+  gap: 20px;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--text-title-color);
+  font-family: var(--main-font);
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+
+.wrapper__list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: var(--main-font);
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 23.4px;
+}
+
+.wrapper__text {
+  font-family: var(--main-font);
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 23.4px;
+  color: var(--text-color);
+}
+
+.content__link {
+  text-decoration: none;
+  text-shadow: 2px 1px 0px var(--accent-color);
+}
+
+@media (hover: hover) {
+  .content__link:hover {
+    border-block-end: 1px solid var(--text-color);
+  }
+}
+
+@media (hover: none) {
+  .content__link:hover {
+    border-block-end: 1px solid var(--text-color);
+  }
+}
+
+.content__link:focus {
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+.content__link:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
+.main__wrapper-picture {
+  gap: 10px;
+}
+
+.wrapper__image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 668px;
+  height: 100vh;
+}
+
+.footer__title {
+  font-family: var(--main-font);
+  font-size: 6.4em;
+  font-weight: 700;
+  line-height: 95.7px;
+  text-align: center;
+  color: var(--accent-text-color);
+  text-shadow: 2px 2px 0px var(--accent-color);
 }
