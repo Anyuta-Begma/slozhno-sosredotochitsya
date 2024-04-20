@@ -62,7 +62,7 @@
   .main__wrapper-why,
   .main__wrapper-how {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 315px 1fr;
   }
 
   .main__wrapper-what {

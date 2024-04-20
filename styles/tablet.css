@@ -1,4 +1,4 @@
-@media (768px <= width < 1024px) {
+@media (width >= 768px) {
   .page {
     padding: 0 20px;
   }
@@ -48,16 +48,13 @@
   .main__wrapper-why,
   .main__wrapper-how {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 236px 1fr;
     gap: 0 20px;
   }
 
   .wrapper__title-what {
     display: flex;
     flex-direction: row;
-  }
-
-  .wrapper__title-what {
     width: 30%;
   }
 

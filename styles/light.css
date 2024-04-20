@@ -22,6 +22,11 @@
     display: none;
   }
 
+  .decorated-zone::before,
+  .decorated-zone::after {
+    border-color: var(--border-color);
+  }
+
   .theme_auto .rec {
     display: none;
   }
