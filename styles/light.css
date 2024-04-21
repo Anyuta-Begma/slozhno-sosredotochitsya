@@ -15,6 +15,7 @@
     --accent-text-color: #ffc2e6;
     --hover-color: #32312d66;
     --transparent-color: #00000000;
+    --background-color: #FFF1F7;
     --background-image: url(../images/cover-image-light.png);
   }
 
@@ -46,6 +47,7 @@
   --accent-text-color: #ffc2e6;
   --hover-color: #32312d66;
   --transparent-color: #00000000;
+  --background-color: #FFF1F7;
   --background-image: url(../images/cover-image-light.png);
 }
 
