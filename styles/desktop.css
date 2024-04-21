@@ -38,8 +38,7 @@
     inset-block-start: 28px;
   }
 
-  .header__title,
-  .footer__title {
+  .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-inline-start: -20px;
     color: var(--accent-text-color);
@@ -116,6 +115,7 @@
 
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    color: var(--accent-text-color);
     text-shadow: 2px 2px 0 var(--text-shadow-color);
   }
 }
